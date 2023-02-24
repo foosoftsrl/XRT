@@ -219,7 +219,7 @@ if [[ $INSTALL_PKG == 1 && ( $INSTALL_KERNEL_DRV == "yes" || $FORCE_INSTALL_KERR
         fi
     fi
 
-    if [[ $FLAVOR == "rhel" || $FLAVOR == "centos" ]]; then
+    if [[ $FLAVOR == "rhel" || $FLAVOR == "centos" || $FLAVOR == "rocky"]]; then
         xrt=XRT-$XRT_VER-Linux.rpm
         yum list installed xrt 2&1> /dev/null
         if [ $? == 0 ]; then

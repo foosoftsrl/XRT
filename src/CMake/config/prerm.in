@@ -30,7 +30,7 @@
 # configuration of the components and hence we want to handle the configuration
 # in postinst script.
 
-awk -F= '$1=="ID" {print $2}' /etc/os-release | tr -d '"' | awk '{print tolower($1)}' | grep -Eq "^rhel|^centos"
+awk -F= '$1=="ID" {print $2}' /etc/os-release | tr -d '"' | awk '{print tolower($1)}' | grep -Eq "^rhel|^centos|^rocky"
 if [ $? -eq 0 ] && [ $1 -ge 1 ]; then
     echo "Cleanup is skipped for package upgrade/downgrade/re-install on RHEL/CentOS"
     exit 0
