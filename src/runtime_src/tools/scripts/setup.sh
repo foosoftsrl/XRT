@@ -23,7 +23,7 @@ if [[ $OSDIST == "ubuntu" ]]; then
     fi
 fi
 
-if [[ $OSDIST == "centos" ]] || [[ $OSDIST == "rhel"* ]]; then
+if [[ $OSDIST == "centos" ]] || [[ $OSDIST == "rhel" ]] || [[ $OSDIST == "rocky" ]]; then
     if (( $OSREL < 704 )); then
         echo "ERROR: Centos or RHEL release version must be 7.4 or later"
         return 1

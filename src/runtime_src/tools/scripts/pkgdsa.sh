@@ -953,6 +953,7 @@ FLAVOR=`echo $FLAVOR | tr -d '"'`
 
 case "$FLAVOR" in
   ("centos") docentos ;;
+  ("rocky") docentos ;;
   ("rhel") docentos ;;
   ("ubuntu") doubuntu ;;
   (*) echo "Unsupported OS '${FLAVOR}'" && exit 1 ;;

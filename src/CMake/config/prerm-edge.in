@@ -31,7 +31,7 @@
 # in postinst script.
 
 OSDIST=`grep '^ID=' /etc/os-release | awk -F= '{print $2}' | tr -d '"'`
-if [ [ $OSDIST == "centos" ] || [ $OSDIST == "rhel" ] ] && [ $1 -ge 1 ]; then
+if [ [ $OSDIST == "centos" ] || [ $OSDIST == "rhel" ] || [ $OSDIST == "rhel" ] ] && [ $1 -ge 1 ]; then
     echo "Cleanup is skipped for package upgrade/downgrade/re-install on RHEL/CentOS"
     exit 0
 fi
